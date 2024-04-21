@@ -14,7 +14,8 @@ class Television:
         self.__status = not self.__status
 
     def mute(self):
-        self.__muted = not self.__muted
+        if self.__status:
+            self.__muted = not self.__muted
 
     def channel_up(self):
         if self.__status:
